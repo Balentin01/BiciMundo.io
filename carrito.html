@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras - BiciMundo</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <section class="carrito-section">
+    <div class="carrito-container">
+      <h2>Tu Carrito de Compras</h2>
+      <div id="lista-carrito"></div>
+      <p id="total-carrito">Total: RD$0</p>
+      <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+  </section>
+
+  <script>
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    function mostrarCarrito() {
+      const contenedor = document.getElementById("lista-carrito");
+      const totalTexto = document.getElementById("total-carrito");
+      contenedor.innerHTML = "";
+      let total = 0;
+
+      if (carrito.length === 0) {
+        contenedor.innerHTML = "<p>Tu carrito está vacío.</p>";
+        totalTexto.textContent = "Total: RD$0";
+        return;
+      }
+
+      carrito.forEach((producto, index) => {
+        total += producto.precio * producto.cantidad;
+        const item = document.createElement("div");
+        item.className = "carrito-item";
+        item.innerHTML = `
+          <span><strong>${producto.nombre}</strong> x${producto.cantidad}</span>
+          <span>RD$${producto.precio * producto.cantidad}</span>
+          <button onclick="eliminarProducto(${index})">Eliminar</button>
+        `;
+        contenedor.appendChild(item);
+      });
+
+      totalTexto.textContent = "Total: RD$" + total;
+    }
+
+    function eliminarProducto(index) {
+      carrito.splice(index, 1);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      mostrarCarrito();
+    }
+
+    function finalizarCompra() {
+      alert("¡Gracias por tu compra!");
+      localStorage.removeItem("carrito");
+      window.location.href = "index.html";
+    }
+
+    document.addEventListener("DOMContentLoaded", mostrarCarrito);
+  </script>
+</body>
+</html>
