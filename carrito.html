@@ -8,6 +8,60 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+  <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="mundo.jpg" alt="logo" id="biciMundo">
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Estoy buscando...">
+            <button type="submit">Buscar</button>
+        </div>
+
+        <div class="phone-container">
+            <label class="hide-on-mobile"><i class="fas fa-phone-alt"></i> Contactanos</label>
+        </div>
+        <span class="cart-container">
+            <i class="fas fa-shopping-cart"></i> <strong class="hide-on-mobile">0</strong>
+        </span>
+        <span class="user-container">
+            <a href="registro.html" title="registro"> <i class="fas fa-user"></i> </a><span class="hide-on-mobile"> </span>
+        </span>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</header>
+
+<!-- MENÚ DEBAJO DEL HEADER -->
+<nav class="main-menu" id="main-menu">
+  <ul>
+    <li><a href="Index.html">Inicio</a></li>
+      <li><a href="bicicletas.html">BICICLETAS</a></li>
+      <li><a href="accesorios.html">ACCESORIOS</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+
+
+  </ul>
+</nav>
+
+<nav class="mobile-menu" id="mobile-menu">
+<div class="menu-header">
+  <span>Menú</span>
+  <button id="close-menu">&times;</button>
+</div>
+<ul>
+<li><a href="Index.html">Inicio</a></li>
+  <li><a href="bicicletas.html">BICICLETAS</a></li>
+  <li><a href="accesorios.html">ACCESORIOS</a></li>
+  <li><a href="contacto.html">Contacto</a></li>
+</ul>
+</nav>
+</div>
   <section class="carrito-section">
     <div class="carrito-container">
       <h2>Tu Carrito de Compras</h2>
