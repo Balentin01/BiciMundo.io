@@ -724,7 +724,7 @@ a {
 .hero-overlay p {
   font-size: 1.2em;
   margin-top: 10px;
-  color: #dddddd;
+  color: #000000;
 }
 
 @keyframes fadeInDown {
