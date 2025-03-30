@@ -38,9 +38,6 @@
         <div class="phone-container">
             <label class="hide-on-mobile"><i class="fas fa-phone-alt"></i> Contactanos</label>
         </div>
-        <span class="cart-container">
-            <i class="fas fa-shopping-cart"></i> <strong class="hide-on-mobile">0</strong>
-        </span>
         <span class="user-container">
           <a href="login.html" title="registro"> <i class="fas fa-user"></i> </a><span class="hide-on-mobile"> </span>
       </span>
@@ -87,50 +84,119 @@
     </div>
   </section>
 
-  <script>
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  
+<h2>Tu Carrito de Compras</h2>
+<div id="lista-carrito" class="carrito-lista"></div>
+<h3 id="total-carrito" style="margin-top:20px;">Total: RD$0</h3>
+<button onclick="finalizarCompra()" style="margin-top:20px; padding:10px 20px; background-color:#28a745; color:#fff; border:none; border-radius:5px; cursor:pointer;">
+  Finalizar Compra
+</button>
 
-    function mostrarCarrito() {
-      const contenedor = document.getElementById("lista-carrito");
-      const totalTexto = document.getElementById("total-carrito");
-      contenedor.innerHTML = "";
-      let total = 0;
 
-      if (carrito.length === 0) {
-        contenedor.innerHTML = "<p>Tu carrito está vacío.</p>";
-        totalTexto.textContent = "Total: RD$0";
-        return;
-      }
+<h2>🛒 Tu Carrito</h2>
+<div id="lista-carrito" class="carrito-lista" style="margin-bottom: 20px;"></div>
+<h3 id="total-carrito" style="font-size: 20px; margin-bottom: 20px;">Total: RD$0</h3>
+<button onclick="finalizarCompra()" style="padding: 12px 24px; background-color: green; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">
+  Finalizar Compra
+</button>
 
-      carrito.forEach((producto, index) => {
-        total += producto.precio * producto.cantidad;
-        const item = document.createElement("div");
-        item.className = "carrito-item";
-        item.innerHTML = `
-          <span><strong>${producto.nombre}</strong> x${producto.cantidad}</span>
-          <span>RD$${producto.precio * producto.cantidad}</span>
-          <button onclick="eliminarProducto(${index})">Eliminar</button>
-        `;
-        contenedor.appendChild(item);
-      });
+<style>
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+.carrito-item button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+</style>
 
-      totalTexto.textContent = "Total: RD$" + total;
+<script>
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  function mostrarToast(mensaje) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = mensaje;
+    Object.assign(toast.style, {
+      position: 'fixed', bottom: '20px', right: '20px', background: '#28a745', color: '#fff',
+      padding: '10px 20px', borderRadius: '5px', boxShadow: '0 2px 10px rgba(0,0,0,0.3)',
+      zIndex: '1000', opacity: '0', transition: 'opacity 0.5s ease-in-out'
+    });
+    document.body.appendChild(toast);
+    setTimeout(() => toast.style.opacity = '1', 100);
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      setTimeout(() => toast.remove(), 500);
+    }, 2500);
+  }
+
+  function mostrarCarrito() {
+    const contenedor = document.getElementById("lista-carrito");
+    const totalTexto = document.getElementById("total-carrito");
+    contenedor.innerHTML = "";
+    let total = 0;
+
+    if (carrito.length === 0) {
+      contenedor.innerHTML = "<p>Tu carrito está vacío.</p>";
+      totalTexto.textContent = "Total: RD$0";
+      return;
     }
 
-    function eliminarProducto(index) {
-      carrito.splice(index, 1);
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-      mostrarCarrito();
-    }
+    carrito.forEach((producto, index) => {
+      total += producto.precio * producto.cantidad;
+      const item = document.createElement("div");
+      item.className = "carrito-item";
+      item.innerHTML = \`
+        <div><strong>\${producto.nombre}</strong> x\${producto.cantidad}</div>
+        <div>RD$\${producto.precio * producto.cantidad}</div>
+        <button onclick="eliminarProducto(\${index})">Eliminar</button>
+      \`;
+      contenedor.appendChild(item);
+    });
 
-    function finalizarCompra() {
-      alert("¡Gracias por tu compra!");
-      localStorage.removeItem("carrito");
-      window.location.href = "index.html";
-    }
+    totalTexto.textContent = "Total: RD$" + total;
+  }
 
-    document.addEventListener("DOMContentLoaded", mostrarCarrito);
-  </script>
-  <script src="script.js"></script>
+  function eliminarProducto(index) {
+    carrito.splice(index, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarCarrito();
+  }
+
+  function finalizarCompra() {
+    if (carrito.length === 0) {
+      mostrarToast("Tu carrito está vacío.");
+      return;
+    }
+    mostrarToast("¡Gracias por tu compra!");
+    localStorage.removeItem("carrito");
+    setTimeout(() => window.location.href = "index.html", 2500);
+  }
+
+  document.addEventListener("DOMContentLoaded", mostrarCarrito);
+</script>
+
 </body>
 </html>

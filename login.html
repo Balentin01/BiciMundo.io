@@ -24,11 +24,7 @@
       </div>
 
       <div class="phone-container">
-          <label class="hide-on-mobile"><i class="fas fa-phone-alt"></i> Contactanos</label>
       </div>
-      <span class="cart-container">
-          <i class="fas fa-shopping-cart"></i> <strong class="hide-on-mobile">0</strong>
-      </span>
       <span class="user-container">
         <a href="login.html" title="registro"> <i class="fas fa-user"></i> </a><span class="hide-on-mobile"> </span>
     </span>
@@ -40,6 +36,10 @@
           <span class="bar"></span>
       </div>
   </div>
+
+<a href="carrito.html" id="icono-carrito" style="text-decoration: none; font-size: 18px; margin-left: 20px;">
+  🛒 <span style="background:red;color:white;border-radius:50%;padding:2px 6px;font-size:12px;">0</span>
+</a>
 </header>
 
 <!-- MENÚ DEBAJO DEL HEADER -->
@@ -88,34 +88,39 @@
     </div>
   </section>
   <script src="script.js"></script>
+
+<!-- Font Awesome para íconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <footer class="footer">
-  <div class="footer-content">
+  <div class="footer-section">
     <h3>BiciMundo</h3>
-    <p>© 2025 BiciMundo. Todos los derechos reservados.</p>
-    
-    <div class="footer-links">
-      <a href="index.html">Inicio</a>
-      <a href="bicicletas.html">Bicicletas</a>
-      <a href="accesorios.html">Accesorios</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="login.html">Login</a>
-    </div>
+    <p>© 2025 Todos los derechos reservados.</p>
+  </div>
 
-    <div class="footer-social">
-      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.tiktok.com" target="_blank"rel="noopener">TikTok</a>
-    </div>
+  <div class="footer-section">
+    <h4>Enlaces</h4>
+    <a href="index.html">Inicio</a>
+    <a href="bicicletas.html">Bicicletas</a>
+    <a href="accesorios.html">Accesorios</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="login.html">Login</a>
+  </div>
 
-    <div class="footer-contact">
-      <p>Email: contacto@bicimundo.com</p>
-      <p>Tel: +1 (809) 555-1234</p>
-      <p>Ubicación: Santo Domingo, RD</p>
-    </div>
+  <div class="footer-section">
+    <h4>Redes Sociales</h4>
+    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+  </div>
 
+  <div class="footer-section">
+    <h4>Contacto</h4>
+    <p>Email: contacto@bicimundo.com</p>
+    <p>Tel: +1 (809) 555-1234</p>
+    <p>Ubicación: Santo Domingo, RD</p>
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="btn-top">Ir arriba ↑</button>
   </div>
 </footer>
-
 </body>
 </html>

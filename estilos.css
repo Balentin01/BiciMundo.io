@@ -923,3 +923,58 @@ nav a:hover {
 .contacto{
   color: black;
 }
+
+/* === Footer Estilizado === */
+
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 12px;
+}
+
+.footer a {
+  color: #aaa;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer .btn-top {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer .btn-top:hover {
+  background-color: #666;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

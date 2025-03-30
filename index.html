@@ -1,187 +1,173 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiciMundo: Tu Tienda de Bicicletas</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="icon" type="image/x-icon" href="icon.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Sigmar&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BiciMundo: Tu Tienda de Bicicletas</title>
+<link href="estilos.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="icon.png" rel="icon" type="image/x-icon"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Moon+Dance&amp;family=Oswald:wght@200..700&amp;family=Quicksand:wght@300..700&amp;family=Sigmar&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-   
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registro - BiciMundo</title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Registro - BiciMundo</title>
+<link href="estilos.css" rel="stylesheet"/>
+</meta></meta></head>
 <body>
-  <header>
-    <div class="header-container">
-        <div class="logo">
-          <a href="index.html"> <img src="mundo.jpg" alt="logo" id="biciMundo"></a> 
-        </div>
+<header>
+<div class="header-container">
+<div class="logo">
+<a href="index.html"> <img alt="logo" id="biciMundo" src="mundo.jpg"/></a>
+</div>
+<div class="search-bar">
+<input placeholder="Estoy buscando..." type="text"/>
+<button type="submit">Buscar</button>
+</div>
+<div class="phone-container">
+<label class="hide-on-mobile"><i class="fas fa-phone-alt"></i> Contactanos</label>
+</div>
 
-        <div class="search-bar">
-            <input type="text" placeholder="Estoy buscando...">
-            <button type="submit">Buscar</button>
-        </div>
-
-        <div class="phone-container">
-            <label class="hide-on-mobile"><i class="fas fa-phone-alt"></i> Contactanos</label>
-        </div>
-        <span class="cart-container">
-            <i class="fas fa-shopping-cart"></i> <strong class="hide-on-mobile">0</strong>
-        </span>
-        <span class="user-container">
-          <a href="login.html" title="registro"> <i class="fas fa-user"></i> </a><span class="hide-on-mobile"> </span>
-      </span>
-
-
-        <div class="menu-toggle" id="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </div>
+<span class="user-container">
+<a href="login.html" title="registro"> <i class="fas fa-user"></i> </a><span class="hide-on-mobile"> </span>
+</span>
+<div class="menu-toggle" id="menu-toggle">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</div>
+</div>
+<a href="carrito.html" id="icono-carrito" style="text-decoration: none; font-size: 18px; margin-left: 20px;">
+  🛒 <span style="background:red;color:white;border-radius:50%;padding:2px 6px;font-size:12px;">0</span>
+</a>
 </header>
-
 <!-- MENÚ DEBAJO DEL HEADER -->
 <nav class="main-menu" id="main-menu">
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-      <li><a href="bicicletas.html">BICICLETAS</a></li>
-      <li><a href="accesorios.html">ACCESORIOS</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-
-
-  </ul>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="bicicletas.html">BICICLETAS</a></li>
+<li><a href="accesorios.html">ACCESORIOS</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
 </nav>
-
 <nav class="mobile-menu" id="mobile-menu">
 <div class="menu-header">
-  <span>Menú</span>
-  <button id="close-menu">&times;</button>
+<span>Menú</span>
+<button id="close-menu">×</button>
 </div>
 <ul>
 <li><a href="index.html">Inicio</a></li>
-  <li><a href="bicicletas.html">BICICLETAS</a></li>
-  <li><a href="accesorios.html">ACCESORIOS</a></li>
-  <li><a href="contacto.html">Contacto</a></li>
+<li><a href="bicicletas.html">BICICLETAS</a></li>
+<li><a href="accesorios.html">ACCESORIOS</a></li>
+<li><a href="contacto.html">Contacto</a></li>
 </ul>
 </nav>
+
+<!-- Sección Hero con Video de Fondo -->
+<section class="hero">
+<div class="hero-overlay">
+<h1>Bienvenido a <span>BiciMundo</span></h1>
+<p>Prepárate para rodar con lo mejor.</p>
 </div>
-    <!-- Sección Hero con Video de Fondo -->
-  <section class="hero">
-
-  <div class="hero-overlay">
-    <h1>Bienvenido a <span>BiciMundo</span></h1>
-    <p>Prepárate para rodar con lo mejor.</p>
-  </div>
-
-    <video autoplay muted loop playsinline>
-      <source src="video bici.mp4" type="video/mp4">
+<video autoplay="" loop="" muted="" playsinline="">
+<source src="video bici.mp4" type="video/mp4"/>
       Tu navegador no soporta la etiqueta de video.
     </video>
-  </section>
-
-  <!-- Sección Hero con Imagen de Fondo y Bienvenida -->
-  <section class="hero-img">
-    <div class="hero-content">
-      <h1>BiciMundo: Tu Tienda de Bicicletas</h1>
-      <p>Descubre los últimos modelos de bicicletas y todo lo que necesitas para disfrutar al máximo.</p>
-      <a href="bicicletas.html" class="btn-hero">Comprar</a>
-    </div>
-  </section>
+</section>
+<!-- Sección Hero con Imagen de Fondo y Bienvenida -->
+<section class="hero-img">
+<div class="hero-content">
+<h1>BiciMundo: Tu Tienda de Bicicletas</h1>
+<p>Descubre los últimos modelos de bicicletas y todo lo que necesitas para disfrutar al máximo.</p>
+<a class="btn-hero" href="bicicletas.html">Comprar</a>
+</div>
+</section>
 <!-- Sección extendida visualmente debajo del hero -->
 <section class="next-hero">
-  <div class="next-hero-content">
-    <h2>Explora sin límites</h2>
-    <p>Bicicletas hechas para dominar cualquier terreno con estilo, potencia y precisión.</p>
-  </div>
+<div class="next-hero-content">
+<h2>Explora sin límites</h2>
+<p>Bicicletas hechas para dominar cualquier terreno con estilo, potencia y precisión.</p>
+</div>
 </section>
-
-  <!-- Sección de Productos Destacados -->
-<section id="productos" class="productos-destacados">
-  <div class="container">
-    <h2>Productos Destacados</h2>
-    <div class="productos-grid">
-
-      <div class="producto" data-aos="fade-up" data-aos-duration="1000">
-        <img src="bicicleta 1.jpeg" alt="Montaña Xtreme">
-        <h3>Montaña Xtreme</h3>
-        <p><strong>Modelo:</strong> MXT-500</p>
-        <p><strong>Tipo:</strong> Bicicleta de montaña</p>
-        <p><strong>Marca:</strong> TrailBlazer</p>
-        <p><strong>Precio:</strong> RD$42,500</p>
-        <p>Diseñada para dominar senderos extremos con doble suspensión, marco de aluminio y neumáticos reforzados.</p>
-        <a href="bicicletas.html" class="btn-comprar" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 4px;">Comprar</a>
-      </div>
-
-      <div class="producto" data-aos="fade-up" data-aos-duration="1000">
-        <img src="bicicleta 2.jpeg" alt="Urbana CityFlow">
-        <h3>Urbana CityFlow</h3>
-        <p><strong>Modelo:</strong> UCF-200</p>
-        <p><strong>Tipo:</strong> Bicicleta urbana</p>
-        <p><strong>Marca:</strong> MetroRider</p>
-        <p><strong>Precio:</strong> RD$29,900</p>
-        <p>Ligera y práctica, ideal para el día a día en la ciudad. Incluye asiento ergonómico y marco antirrobo.</p>
-        <a href="bicicletas.html" class="btn-comprar" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 4px;">Comprar</a>
-      </div>
-
-      <div class="producto" data-aos="fade-up" data-aos-duration="1000">
-        <img src="bicicleta 3.jpeg" alt="Ruta AeroSpeed">
-        <h3>Ruta AeroSpeed</h3>
-        <p><strong>Modelo:</strong> ASP-700</p>
-        <p><strong>Tipo:</strong> Bicicleta de ruta</p>
-        <p><strong>Marca:</strong> SpeedX</p>
-        <p><strong>Precio:</strong> RD$49,700</p>
-        <p>Ideal para los amantes de la velocidad. Marco ultraliviano de carbono y transmisión de precisión Shimano.</p>
-        <a href="bicicletas.html" class="btn-comprar" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 4px;">Comprar</a>
-      </div>
-
-    </div>
-  </div>
+<!-- Sección de Productos Destacados -->
+<section class="productos-destacados" id="productos">
+<div class="container">
+<h2>Productos Destacados</h2>
+<div class="productos-grid">
+<div class="producto" data-aos="fade-up" data-aos-duration="1000">
+<img alt="Montaña Xtreme" src="bicicleta 1.jpeg"/>
+<h3>Montaña Xtreme</h3>
+<p><strong>Modelo:</strong> MXT-500</p>
+<p><strong>Tipo:</strong> Bicicleta de montaña</p>
+<p><strong>Marca:</strong> TrailBlazer</p>
+<p><strong>Precio:</strong> RD$42,500</p>
+<p>Diseñada para dominar senderos extremos con doble suspensión, marco de aluminio y neumáticos reforzados.</p>
+<a class="btn-comprar" href="bicicletas.html" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 4px;">Comprar</a>
+</div>
+<div class="producto" data-aos="fade-up" data-aos-duration="1000">
+<img alt="Urbana CityFlow" src="bicicleta 2.jpeg"/>
+<h3>Urbana CityFlow</h3>
+<p><strong>Modelo:</strong> UCF-200</p>
+<p><strong>Tipo:</strong> Bicicleta urbana</p>
+<p><strong>Marca:</strong> MetroRider</p>
+<p><strong>Precio:</strong> RD$29,900</p>
+<p>Ligera y práctica, ideal para el día a día en la ciudad. Incluye asiento ergonómico y marco antirrobo.</p>
+<a class="btn-comprar" href="bicicletas.html" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 4px;">Comprar</a>
+</div>
+<div class="producto" data-aos="fade-up" data-aos-duration="1000">
+<img alt="Ruta AeroSpeed" src="bicicleta 3.jpeg"/>
+<h3>Ruta AeroSpeed</h3>
+<p><strong>Modelo:</strong> ASP-700</p>
+<p><strong>Tipo:</strong> Bicicleta de ruta</p>
+<p><strong>Marca:</strong> SpeedX</p>
+<p><strong>Precio:</strong> RD$49,700</p>
+<p>Ideal para los amantes de la velocidad. Marco ultraliviano de carbono y transmisión de precisión Shimano.</p>
+<a class="btn-comprar" href="bicicletas.html" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 4px;">Comprar</a>
+</div>
+</div>
+</div>
 </section>
-
-  <script src="script.js"></script>
-  <script>
+<script src="script.js"></script>
+<script>
     AOS.init();
   </script>
+<!-- Font Awesome para íconos -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <footer class="footer">
-  <div class="footer-content">
-    <h3>BiciMundo</h3>
-    <p>© 2025 BiciMundo. Todos los derechos reservados.</p>
-    
-    <div class="footer-links">
-      <a href="index.html">Inicio</a>
-      <a href="bicicletas.html">Bicicletas</a>
-      <a href="accesorios.html">Accesorios</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="login.html">Login</a>
-    </div>
-
-    <div class="footer-social">
-      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.tiktok.com" target="_blank"rel="noopener">TikTok</a>
-    </div>
-
-    <div class="footer-contact">
-      <p>Email: contacto@bicimundo.com</p>
-      <p>Tel: +1 (809) 555-1234</p>
-      <p>Ubicación: Santo Domingo, RD</p>
-    </div>
-
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="btn-top">Ir arriba ↑</button>
-  </div>
+<div class="footer-section">
+<h3>BiciMundo</h3>
+<p>© 2025 Todos los derechos reservados.</p>
+</div>
+<div class="footer-section">
+<h4>Enlaces</h4>
+<a href="index.html">Inicio</a>
+<a href="bicicletas.html">Bicicletas</a>
+<a href="accesorios.html">Accesorios</a>
+<a href="contacto.html">Contacto</a>
+<a href="login.html">Login</a>
+</div>
+<div class="footer-section">
+<h4>Redes Sociales</h4>
+<a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+<a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+<a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+</div>
+<div class="footer-section">
+<h4>Contacto</h4>
+<p>Email: contacto@bicimundo.com</p>
+<p>Tel: +1 (809) 555-1234</p>
+<p>Ubicación: Santo Domingo, RD</p>
+<button class="btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Ir arriba ↑</button>
+</div>
 </footer>
-
 </body>
 </html>
+</body></html>
