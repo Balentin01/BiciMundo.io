@@ -978,3 +978,124 @@ nav a:hover {
     text-align: center;
   }
 }
+
+
+/*Chatbot*/
+#chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+  z-index: 9999;
+}
+
+#chatbot-toggle:hover {
+  background: #0056b3;
+}
+
+/* Contenedor del chatbot */
+#chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado del chatbot */
+#chatbot-header {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chatbot-close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+}
+
+#chatbot-close:hover {
+  color: #ff4d4d; /* Rojo suave al pasar el mouse */
+  transform: scale(1.2); /* Efecto de agrandamiento */
+}
+
+/* Área de mensajes */
+#chatbot-messages {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 15px;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-message {
+  background: #000000;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 5px 0;
+  max-width: 80%;
+}
+
+.user-message {
+  background: #222;
+  color: white;
+  align-self: flex-end;
+}
+
+/* Botones de opciones */
+.chatbot-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 5px; /* Espacio entre botones */
+  padding: 10px;
+  background: white;
+}
+
+.chatbot-buttons button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.chatbot-buttons button:hover {
+  background: #222;
+}

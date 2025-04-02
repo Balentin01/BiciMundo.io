@@ -87,3 +87,37 @@ const mainMenu = document.querySelector('.main-menu');
 menuToggle.addEventListener('click', () => {
   mainMenu.classList.toggle('active');
 });
+
+//chatbot
+   // Botón de abrir/cerrar chatbot
+   document.getElementById("chatbot-toggle").onclick = function() {
+    let chatbot = document.getElementById("chatbot-container");
+    chatbot.style.display = (chatbot.style.display === "block") ? "none" : "block";
+};
+
+// Botón de cerrar chatbot
+document.getElementById("chatbot-close").onclick = function() {
+    document.getElementById("chatbot-container").style.display = "none";
+};
+
+// Función para enviar mensaje
+function sendMessage(option) {
+    let response = "";
+    if (option === "Productos") response = "Vendemos Biciletas y accesorios para bicicletas. ";
+    if (option === "Precios") response = "Nuestros precios varían entre RD$27,800 y RD$58,900.";
+    if (option === "Horarios") response = "Estamos abiertos de Lunes a Viernes de 9 AM a 6 PM.";
+    if (option === "Ubicación") response = "Estamos ubicados en la Avenida 27 de Febrero, Santo Domingo.";
+    if (option === "Métodos de pago") response = "Aceptamos tarjetas de crédito, débito y efectivo.";
+    if (option === "Mas") response = "Si pasas por nuestra local puede alquilar una bicicleta tambien";
+
+    let chatbox = document.getElementById("chatbot-messages");
+    
+    // Agregar mensaje del usuario
+    chatbox.innerHTML += `<p class="chatbot-message user-message">${option}</p>`;
+    
+    // Agregar respuesta del chatbot
+    setTimeout(() => {
+        chatbox.innerHTML += `<p class="chatbot-message">${response}</p>`;
+        chatbox.scrollTop = chatbox.scrollHeight; // Desplazar al final
+    }, 500);
+}

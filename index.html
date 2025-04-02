@@ -135,7 +135,29 @@
 </div>
 </div>
 </section>
+
+<button id="chatbot-toggle">💬</button>
+
+<div id="chatbot-container" style="display: none;">
+    <div id="chatbot-header">
+        Chatbot 
+        <button id="chatbot-close" style="float: right; background: red; color: white; border: none; cursor: pointer;">✖</button>
+    </div>
+    <div id="chatbot-messages">
+        <p class="chatbot-message">Hola, ¿cómo puedo ayudarte?</p>
+    </div>
+    <div class="chatbot-buttons">
+        <button onclick="sendMessage('Productos')">¿Cuáles son tus productos?</button>
+        <button onclick="sendMessage('Precios')">¿Cuáles son tus precios?</button>
+        <button onclick="sendMessage('Horarios')">¿Cuáles son sus horarios?</button>
+        <button onclick="sendMessage('Ubicación')">¿Dónde están ubicados?</button>
+        <button onclick="sendMessage('Métodos de pago')">¿Métodos de pago?</button>
+        <button onclick="sendMessage('Mas')">¿Algo Más?</button>
+    </div>
+</div>
+
 <script src="script.js"></script>
+
 <script>
     AOS.init();
   </script>
